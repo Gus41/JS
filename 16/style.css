@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: white;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    background-color: #74546A;
+    text-shadow: 2px 2px 4px black;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 4px 4px 8px black;
+}
+body{
+    background-color: #07090F;
+}
+main{
+    background-color: #74546A;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px black;
+
+}
+.caixa{
+    background-color: #FFC49B;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px black;
+}
+.item{
+    background-color: #FFEFD3;
+    padding: 2px;
+    margin: 2px 0;
+    width: 100px;
+    border-radius: 6px;
+    border: 2px solid #07090F;
+    cursor: pointer;
+}
+button{
+    padding: 5px;
+    color: white;
+    background-color: #07090F;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px black;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #07090fc5;
+}
+.selecionado{
+    border-color:white;
+    background-color: #dd9e9e;
+}

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    background-color: rgba(128, 128, 128, 0.192);
+    text-align: center;
+    padding: 10px;
+    height: 500px;
+    width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.548);
+}
+.item{
+    background-color: red;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px;
+    margin-top: 2px;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: not-allowed;
+}
+#texto{
+    background-color: rgb(216, 181, 216);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.555);
+    margin-bottom: 5px;
+}
+#caixa{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.623);
+    cursor: pointer;
+}

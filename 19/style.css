@@ -1,0 +1,61 @@
+body{
+    background-color: #07090F;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+#caixa{
+    border-radius: 10px;
+    margin: auto;
+    background-color: #07090F;
+    width: 400px;
+    box-shadow: 2px 2px 3px black;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+main{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+}
+label{
+    text-align: center;
+}
+input{
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 3px black;
+    border: none;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 2px black;
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(166, 190, 197);
+}
+.elemento{
+    background-color: rgb(169, 193, 204);
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}

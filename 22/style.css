@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    background-color: rgba(128, 128, 128, 0.39);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+button{
+    width: 150px;
+    padding: 10px;
+    background-color: rgba(159, 159, 233, 0.493);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.elemento{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selecionado{
+    background-color: gray;
+    border-color: red;
+}
+.caixa{
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+}
+.c1{
+    background-color: rgba(170, 170, 170, 0.308);
+    color: black;
+}
+.c2{
+    background-color: black;
+    color: white;
+}
+.caixaF{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+.comandos{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#caixaNovoC input{
+    box-shadow: 2px 2px 4px black;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}

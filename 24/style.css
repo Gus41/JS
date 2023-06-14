@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #07090F;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caixa{
+    background-color: #7A3B69;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+}
+.caixaE{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding: 5px;
+    margin: 2px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    color: white;
+    background-color: #07090F;
+}
+button:hover{
+    background-color: #151b2b;
+}
+label{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+#conteudo{
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 2px;
+    box-shadow: 2px 2px 3px black;
+}
+.elemento{
+    background-color:#07090F;
+    color: white;
+    padding: 10px;
+    margin: 4mpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px black;
+}
+.comandos{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

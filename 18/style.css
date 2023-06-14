@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #07090F;
+}
+.elemento{
+    text-align: center;
+    padding: 10px;
+    background-color: #1e2a4e;
+    width: 200px;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    border-radius: 7px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+#caixa{
+    background-color: #07090F;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+button{
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.692);
+}
