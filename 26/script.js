@@ -2,6 +2,7 @@ const elementos = [1,2,3,4,5,6,7,11]
 const arr = document.querySelector("#arr")
 const btn = document.querySelector("#btn")
 const res = document.querySelector("#res")
+const btn2 = document.getElementById("btn2")
 arr.innerHTML = "Array:  ["+elementos+"]"
 res.innerHTML = "Resultado da verificação virá aqui"
 
@@ -16,5 +17,17 @@ btn.addEventListener("click", ()=>{
 
     if(r){
         res.innerHTML = "Array de elementos ok"
+    }
+})
+
+btn2.addEventListener("click", ()=>{
+    res.innerHTML ="Array não conforme"
+    const r = elementos.some( (e,i)=>{
+    
+        return e > 10;
+    })
+
+    if(r){
+        res.innerHTML = "Array conforme, o metodo some retorna se apenas alguns elementos contem essa condiçao do array"
     }
 })

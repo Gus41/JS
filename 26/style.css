@@ -24,7 +24,8 @@ p{
 }
 button{
     padding: 8px;
-    width: 100px;
+    margin: 3px;
+    width: 400px;
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 3px black;
@@ -46,4 +47,9 @@ button:hover{
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+p{
+    width: 450px;
 }
