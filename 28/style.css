@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #1F2421;
+}
+h1{
+    text-align: center;
+}
+main{
+    background-color: #EB5160;
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
+.caixa{
+    background-color: #1F2421;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.742);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+    box-shadow: 2px 2px 3pc black;
+}
+#botoes{
+    background-color: #1F2421;
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+}
+.btn{
+    background-color: #EB5160;
+    padding: 2px;
+    margin: 5px;
+    width: 10%;
+    border: 1px solid black;
+    border-radius: 100px;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+#res{
+    background-color: #1F2421;
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+    text-align: center;
+    color: white;
+}
