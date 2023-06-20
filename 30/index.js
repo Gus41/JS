@@ -1,4 +1,5 @@
 class carro{
+    lat = "teste"
     constructor(nome,tipo){
       this.nome = nome;
       if ( tipo == 1 ){
