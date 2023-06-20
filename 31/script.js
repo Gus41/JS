@@ -22,7 +22,17 @@ class Pessoa{
 }
 let pessoas = []
 const btn = document.querySelector("#btn")
-const res = document.getElementById("#res")
+const res = document.getElementById("res")
+
+const addPessoa = ()=>{
+    res.innerHTML = ""
+    pessoas.map((p)=>{
+        const div = document.createElement("div")
+        div.setAttribute("class","pess")
+        div.innerHTML = `Nome : ${p.getNome()}, Idade: ${p.getIdade()}`
+        res.appendChild(div)
+    })
+}
 btn.addEventListener("click",()=>{
 
     const nome = document.getElementById("nome")
@@ -32,4 +42,5 @@ btn.addEventListener("click",()=>{
     nome.value =""
     idade.value = ""
     nome.focus()
+    addPessoa();
 })
