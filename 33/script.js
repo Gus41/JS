@@ -30,7 +30,7 @@ btn.addEventListener("click",()=>{
     if(verifica()){
         const inp1 = document.getElementById("nome")
         const inp2 = document.getElementById("idade")
-
+        
         Pessoa.setIdade(inp2.value)
         Pessoa.setNome(inp1.value)
 
