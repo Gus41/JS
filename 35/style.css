@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.carros{
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.carro{
+    border: 1px solid black;
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+}
+.campoform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#EB5160 ;
+}
