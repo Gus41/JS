@@ -2,12 +2,18 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #1F2421;
+
+}
 .carros{
     display: flex;
     width: 100%;
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
+    background-color:#EB5160 ;
+    margin: 5px;
 }
 .carro{
     border: 1px solid black;
@@ -23,4 +29,10 @@
     justify-content: center;
     align-items: center;
     background-color:#EB5160 ;
+}
+.campoform input{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    padding: 4px;
 }
