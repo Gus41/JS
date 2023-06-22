@@ -9,6 +9,7 @@ const portas = document.getElementById("portas")
 
 
 
+
 radioM.addEventListener("click",()=>{
     blind.removeAttribute("disabled")
     municao.removeAttribute("disabled")
@@ -22,29 +23,55 @@ radioN.addEventListener("click",()=>{
 })
 
 let carros =[]
+
+const remover = (quem)=>{
+    window.alert("Dentro da função")
+    carros = carros.filter( (el)=>{
+        return el.nome!=quem;
+    })
+}
 const gerenciarExebicao = ()=>{
     caixa.innerHTML = ""
     carros.map((e)=>{
         const div = document.createElement("div")
         div.setAttribute("class","carro")
-        div.innerHTML = e.nome
+        div.setAttribute("data-nome",e.nome)
+        const btn2 = document.createElement("button")
+        btn2.addEventListener("click",(evt)=>{
+            const quem = evt.target.parentNode.dataset.nome
+            alert("Antes da chamada de função")
+            remover(quem)
+            window.alert("Depois da chamada de função")
+            gerenciarExebicao();
+
+        })
+        div.innerHTML += "Nome: " + e.nome
+        div.innerHTML += ", Portas: " +e.portas
+        div.innerHTML += ", Blindagem: " +e.blindagem
+        div.innerHTML += ", Cor : " + e.cor
+        btn2.innerHTML = "Remover"
+        div.append(btn2)
         caixa.appendChild(div)
     })
 }
 btn.addEventListener("click",()=>{
-    if(tipoN.checked){
+    if(radioN.checked){
         const carro = new Carro(nomecarro.value,portas.value)
-        
+        carros.push(carro);
+    }else{
+        const carro = new Militar(nome.value,portas.value,blind.value,municao.value)
+        carros.push(carro)
     }
     gerenciarExebicao();
+    nome.value= ""
+    portas.value = 0
+    blind.value = 0
+    municao.value = 0
 })
 
+carros.filter( (e)=>{
 
-
-
-
-
-
+})
 
 class Carro{
     constructor(nome,portas){

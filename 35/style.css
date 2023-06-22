@@ -8,7 +8,7 @@ body{
 }
 .carros{
     display: flex;
-    width: 100%;
+    flex-direction: column;
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
@@ -21,7 +21,10 @@ body{
     padding: 5px;
     border-radius: 5px;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
 }
 .campoform{
     display: flex;
@@ -35,4 +38,15 @@ body{
     border-radius: 5px;
     box-shadow: 2px 2px 3px black;
     padding: 4px;
+}
+button{
+    border: none;
+    padding: 5px;
+    width: 200px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #1F2421;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px black;
 }
