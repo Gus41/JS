@@ -25,7 +25,6 @@ radioN.addEventListener("click",()=>{
 let carros =[]
 
 const remover = (quem)=>{
-    window.alert("Dentro da função")
     carros = carros.filter( (el)=>{
         return el.nome!=quem;
     })
@@ -39,9 +38,7 @@ const gerenciarExebicao = ()=>{
         const btn2 = document.createElement("button")
         btn2.addEventListener("click",(evt)=>{
             const quem = evt.target.parentNode.dataset.nome
-            alert("Antes da chamada de função")
             remover(quem)
-            window.alert("Depois da chamada de função")
             gerenciarExebicao();
 
         })
