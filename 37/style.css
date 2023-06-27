@@ -5,11 +5,6 @@
 body{
     background-color: #171A21;
 }
-.dFlex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .calc{
     display: flex;
     justify-content: center;
