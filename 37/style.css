@@ -2,3 +2,63 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #171A21;
+}
+.dFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 220px;
+}
+#saida{
+    border: 1px solid blue;
+    width: 220px;
+    background-color: #73877B;
+    text-align: center;
+    padding: 5px;
+    font-family: monospace;
+    font-size: larger;
+}
+.teclas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    flex-wrap: wrap;
+    background-color: #F2F4F3;
+}
+
+.tecla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    border: 1px solid black;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.op{
+    background-color: red;
+}
