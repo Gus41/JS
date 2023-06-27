@@ -15,22 +15,31 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: white;
+    width: 230px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 3px 3px 4px black;
+    padding: 10px;
 }
 .nome{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 220px;
+
 }
 .display{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     width: 220px;
+    margin: 5px;
 }
 #saida{
-    border: 1px solid blue;
     width: 220px;
+    border-radius: 10px;
     background-color: #73877B;
     text-align: center;
     padding: 5px;
@@ -50,15 +59,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #aaa;
-    border: 1px solid black;
+    border: none;
     font-weight: bold;
     width: 50px;
     height: 50px;
     margin: 2px;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
 }
 .op{
-    background-color: red;
+    background-color: rgb(252, 56, 56);
 }
