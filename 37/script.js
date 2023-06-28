@@ -2,7 +2,7 @@ const teclasNum = [...document.querySelectorAll(".num")]
 const teclasOp = [...document.querySelectorAll(".Top")]
 const res = document.getElementById("igual")
 const display = document.getElementById("saida")
-const OnOff = document.getElementById("OnOff")
+const CPY = document.getElementById("CPY")
 const clear = document.getElementById("clear")
 
 let flag = false
@@ -37,7 +37,12 @@ teclasOp.forEach((el)=>{
             if( display.innerHTML == "0" ){
                 display.innerHTML= ""
             }
-            display.innerHTML += evt.target.innerHTML
+            if( evt.target.innerHTML == "x"){
+                display.innerHTML += "*"
+            }else{
+                display.innerHTML += evt.target.innerHTML
+
+            }
         }
     })
 })
@@ -51,4 +56,7 @@ res.addEventListener("click",()=>{
     virgula = false
     const resultado = eval(display.innerHTML)
     display.innerHTML = resultado;
+})
+CPY.addEventListener("click",()=>{
+    navigator.clipboard.writeText(display.innerHTML)
 })
