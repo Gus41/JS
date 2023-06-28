@@ -5,7 +5,7 @@
 body{
     background-color: #171A21;
 }
-.calc{
+.principal{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +13,10 @@ body{
     background-color: white;
     width: 230px;
     border-radius: 10px;
-    margin: auto;
     margin-top: 30px;
     box-shadow: 3px 3px 4px black;
     padding: 10px;
+
 }
 .nome{
     display: flex;
@@ -65,4 +65,40 @@ body{
 }
 .op{
     background-color: rgb(252, 56, 56);
+}
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: -250px;
+    transition: all .2s;
+}
+input{
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    padding: 4px;
+    text-align: center;
+}
+input:hover{
+    background-color: rgb(191, 191, 191);
+}
+#aba{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 5px 5px 0px;
+    height: 50px;
+    width: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px black;
+}
+.exibir{
+    left: 0px !important;
+    transition: all .2s;
 }

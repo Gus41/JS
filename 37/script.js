@@ -4,6 +4,9 @@ const res = document.getElementById("igual")
 const display = document.getElementById("saida")
 const CPY = document.getElementById("CPY")
 const clear = document.getElementById("clear")
+const teste = document.getElementById("teste")
+const exibir = document.getElementById("aba")
+const calc = document.getElementById("calc")
 
 let flag = false
 let virgula = false
@@ -58,5 +61,11 @@ res.addEventListener("click",()=>{
     display.innerHTML = resultado;
 })
 CPY.addEventListener("click",()=>{
-    navigator.clipboard.writeText(display.innerHTML)
+    teste.select();
+    teste.setSelectionRange(0,99); //moobile
+    navigator.clipboard.writeText(teste.value)
+    //navigator.clipboard.writeText(display.innerHTML) //copiar para area de transferencia
+})
+exibir.addEventListener("click",()=>{
+    calc.classList.toggle("exibir")
 })
