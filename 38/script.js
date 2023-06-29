@@ -1,19 +1,29 @@
 const num = document.getElementById("num")
-let resultado = false
-let tempo = 3000
 
-num.innerHTML = "Processando..."
+let promise = new Promise((ok,rejected)=>{  //instanciando nova promessa
+    let resultado = false
+    let tempo = 2500
+    setTimeout( ()=>{
+        resultado = true
+        if(resultado){
+            ok("Deu tudo certo")
+        }else{
+            rejected("Deu tudo errado")
+        }
+    }, tempo )
 
-setTimeout( ()=>{
-    resultado = true
-}, tempo ) // 3 segundos
-if( resultado ){
-    num.innerHTML = "Deu tudo certo"
+})
+
+promise.then((retorno)=>{
+    num.innerHTML = retorno
     num.classList.remove("erro")
     num.classList.add("ok")
-}else{
-    num.innerHTML = "Deu tudo errado"
+})
+promise.catch((retorno)=>{
+    num.innerHTML = retorno;
     num.classList.add("erro")
     num.classList.remove("ok")
-}
+})
+
+num.innerHTML = "Processando..."
 
