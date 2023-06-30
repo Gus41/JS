@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #1F2421;
+}
+main{
+    background-color: #EB5160;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
+.caixa{
+    background-color: #1F2421;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    color: white;
+}
+button{
+    width: 200px;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+input{
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    width: 200px;
+}
+#res{
+    background-color: white;
+    margin: 10px;
+    color: black;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    
+}
