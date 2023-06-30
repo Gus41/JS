@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    color: green;
+    border-radius: 10px;
+    height: 100px;
+    box-shadow: 5px 5px 6px black;
+}
