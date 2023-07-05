@@ -11,6 +11,7 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
 }
 .controle{
     display: flex;
@@ -23,16 +24,22 @@
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+    
 }
 button{
-
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 5px;
 }
 input[type='number'],#n_objs{
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     width: 150px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.513);
+
 }
 .palco{
     display: flex;
