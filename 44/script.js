@@ -9,6 +9,12 @@ let altura_palco = palco.offsetHeight
 let elementos = []
 let num_elementos = 0
 
+// retorna a largura e altura do palco sempre que o usuario mudar 
+//o tamanho da janela
+window.addEventListener("resize",(evt)=>{
+    let largura_palco = palco.offsetWidth
+    let altura_palco = palco.offsetHeight
+})
 class Elemento{
     constructor(ArrElementos,palco){
         this.tam =Math.floor((Math.random()*10) + 10) // tamanho dos elementos sera entre 10 e 20
@@ -75,8 +81,8 @@ class Elemento{
         this.px += this.direcaox*this.velx // incrementando com a direcao * velocidade
         this.py += this.direcaoy*this.velx // incrementando com a direcao * velocidade
         this.ele.setAttribute("style",`left: ${this.px}px;top:${this.py}px;width:${this.tam}px;height:${this.tam}px;background-color: rgb(${this.r},${this.g},${this.b});`)
-        if ( this.px > largura_palco || this.py > altura_palco ){
-            this.self_remove() // bolinha fora da janela
+        if ( this.px >= largura_palco || this.py >= altura_palco ){
+            this.self_remove() // bolinha fora da janela ( nao funciona )
         }
     }
 }
@@ -84,12 +90,6 @@ class Elemento{
 
 
 
-// retorna a largura e altura do palco sempre que o usuario mudar 
-//o tamanho da janela
-window.addEventListener("resize",(evt)=>{
-    let largura_palco = palco.offsetWidth
-    let altura_palco = palco.offsetHeight
-})
 btn_add.addEventListener("click",(evt)=>{
     if(QntsObjsADD.value < 1){
         alert("Por favor insira a quantidade de elemntos antes")
