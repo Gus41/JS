@@ -12,8 +12,8 @@ let num_elementos = 0
 // retorna a largura e altura do palco sempre que o usuario mudar 
 //o tamanho da janela
 window.addEventListener("resize",(evt)=>{
-    let largura_palco = palco.offsetWidth
-    let altura_palco = palco.offsetHeight
+    largura_palco = palco.offsetWidth
+    altura_palco = palco.offsetHeight
 })
 class Elemento{
     constructor(ArrElementos,palco){
