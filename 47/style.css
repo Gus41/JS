@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    box-shadow: 2px 2px 3px black;
+    width: 450px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+}
+button{
+    padding: 3px;
+    margin: 5px;
+    width: 300px;
+    border: none;
+    box-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+button:hover{
+    outline: 1px solid rgb(208, 6, 6);
+}
