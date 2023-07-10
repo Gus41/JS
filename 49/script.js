@@ -17,6 +17,17 @@ comp["Monitor"] = "22pol" // adicionando propriedades a objetos
 const compcpy = Object.assign({},comp) // Copiando um objeto
 compcpy.Monitor = "20Pol"
 
+const o1 = {obj1: 1}
+const o2 = {obj2: 2}
+const o3 = {obj3: 3}
+const oM = Object.assign(o1,o2,o3)
+// oM agora eh uma mesclagem de todos os objetos acima
+
+const comp2 = Object.create(comp) // criando outro objeto do tipo comp
+
+
+
+
 //array de objetos
 const computadores = [
     {
