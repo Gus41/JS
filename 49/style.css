@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.objs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(90% - 20px);
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: white;
+}
+.classe{
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+}
