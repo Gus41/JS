@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+table{
+    width: 300px;
+    font: 17px Calibri;
+}
+#tabela{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+button{
+    background-color: rgb(205, 204, 204);
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    border: none;
+    box-shadow: 2px 2px 3px black;
+    cursor: pointer;
+}
+button:hover{
+    outline: 1px solid rgb(18, 17, 17);
+}
