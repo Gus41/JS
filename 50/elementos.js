@@ -12,3 +12,6 @@ export{
     GetHelloWorld
 }
 
+export default teste = ()=>{
+    return "Função Default"
+}
