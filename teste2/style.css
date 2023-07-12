@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(19, 5, 48);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: .8rem;
+    background-color: rgb(12, 5, 37);
+    min-height: 50px;
+}
+.img_header{
+    height: 100%;
+    color: white;
+}
+#img_logo{
+    color: white;
+    max-width: 60px;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+nav{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: blueviolet;
+    transition: .4s;
+}
+.btn_header{
+    display: flex;
+    gap: 1rem;
+}
+.btns{
+    padding: .6rem;
+    font-size: .9rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+
+}
+.btns:hover{
+    background-color: rgb(45, 8, 80);
+    transition: .4s;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section{
+    padding: 4rem;
+    color: white;
+}
+.pri{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 650px;
+}
+.pri > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+}
+h1{
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+strong{
+    color: blueviolet;
+}
+.btnLink{
+    width: 200px;
+}
+.img_princ{
+    max-width: 450px;
+    padding: 1rem;   
+}
+.ImagemPr{
+    border-radius: 50%;
+    width: 100%;
+}
+.seg, .quart {
+    background-color: rgb(26, 24, 86);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.seg ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.seg ul li{
+    cursor: pointer;
+}
+li:hover{
+    text-decoration: underline;
+    color: blueviolet;
+    transition: .4s;
+}
+
+#Projetos a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    gap: 2rem;
+    
+}
+
+.title{
+    color: blueviolet;
+}
+.ter{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.ter > div{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.img_quemSouEu{
+    width: 200px;
+    border-radius: 40px;
+}
+footer{
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
