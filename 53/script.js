@@ -10,3 +10,8 @@ for( pes of pessoas ){
     novasPessoas.set(id,{...pes})
 }
 console.log(novasPessoas)
+console.log(novasPessoas.get(2)) // chamando com a chave 2
+
+for ( const pessoas of novasPessoas ){
+    console.log(pessoas) // retorna um array com a chave e com o objeto
+}
