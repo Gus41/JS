@@ -3,6 +3,15 @@ class Pessoa{
         this.nome = nome
         this.sobrenome = sobrenome
     }
+    get nomeCompleto(){
+        return this.nome + " " + this.sobrenome
+    }
+    set nomeCompleto(Valor){
+        Valor = Valor.split(" ")
+        this.nome = Valor.shift()
+        this.sobrenome = Valor.join()
+
+    }
     falar(){
         console.log(this.nome + " está falandoo")
 
@@ -18,7 +27,7 @@ class Pessoa{
 const p1 = new Pessoa("Otavio","Alberto")
 
 //---------------------------
-const _cvelocidade = Symbol("velocidade") //gera um id aleatorio
+const _cvelocidade = Symbol("velocidade") //gera um id aleatorio e UNICO
 console.log(_cvelocidade)
 class Carro{
     constructor(nome){
