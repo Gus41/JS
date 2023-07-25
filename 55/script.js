@@ -25,10 +25,18 @@ class SmartPhone extends Dispositivo{
         this.modelo = modelo
     }
 }
+class Tablet extends SmartPhone{
+    constructor(nome,modelo,cor){
+        super(nome,modelo)
+        this.cor = cor
+    }
+}
 const d1 = new Dispositivo("Telefone")
 const d2 = new SmartPhone("AppelPen","Apple")
+const d3 = new Tablet("PeraPod","Apple","Preto")
 
 console.log(d2)
 d2.ligar()
-
+d3.ligar()
 console.log(d2)
+console.log(d3)
