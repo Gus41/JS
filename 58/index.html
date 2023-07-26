@@ -17,20 +17,23 @@
                 <li>usuario devera ter entre 3 e 12 caracteres</li>
                 <li>Senha precisa ter entre 6 e 12 caracteres</li>
             </ul>
-            <div class="formulario">
+            <form method="post" class="formulario">
+
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+                <input class="validar" type="text" name="nome" id="nome">
                 <label for="Sobrenome">Sobrenome:</label>
-                <input type="text" name="Sobrenome" id="Snome">
+                <input class="validar" type="text" name="Sobrenome" id="Sobrenome">
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf">
+                <input class="validar" type="text" name="Cpf" id="cpf">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" id="ususario">
+                <input class="validar" type="text" name="Usuario" id="Ususario">
+                <label for="senha">Senha:</label>
+                <input class="validar" type="password" name="Senha" id="Senha">
                 <label for="repSenha">Repetir Senha:</label>
-                <input type="text" name="resSenha" id="resSenha">
+                <input class="validar" type="text" name="RepetirSenha" id="RepetirSenha">
 
                 <button id="btn">ENVIAR</button>
-            </div>
+            </form>
 
         </div>
 
@@ -39,6 +42,7 @@
 
 
     </main>
+    <script src="validaCpf.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

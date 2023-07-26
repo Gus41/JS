@@ -43,11 +43,16 @@ button{
     border: none;
     box-shadow: 2px 2px 3px black;
     background-color: rgb(99, 12, 181);
-    margin: 5px;
+    margin: 10px;
     border-radius: 10px;
     color: white;
     cursor: pointer;
 }
 button:hover{
     background-color: blueviolet;
+}
+.error-text{
+    color: red;
+    margin-left: 10px;
+    font-size: medium;
 }
