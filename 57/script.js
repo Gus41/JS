@@ -15,12 +15,15 @@ class validaCpf{
         let reverso = cpf_s.length + 1
 
         for( let stringNum of cpf_s ){
-            
+            total += Number(stringNum) * reverso
+            reverso--
         }
+        const digito = 11 - (total%11)
     }
     geraNovoCpf(){
         const cpfSemDigitos = this.cpfLimpo.slice(0,-2)
         const digito1 = this.geraDigito(cpfSemDigitos)
+        const digito2 = this.geraDigito(cpfSemDigitos + digito1)
     }
     valida(){
         if(!this.cpfLimpo){
