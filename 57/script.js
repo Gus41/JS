@@ -10,7 +10,7 @@ class validaCpf{
     sequencia(){
         return this.cpfLimpo.charAt(0).repeat(this.cpfLimpo.length) === this.cpfLimpo
     }
-    geraDigito(cpf_s){
+    static geraDigito(cpf_s){
         let total = 0
         let reverso = cpf_s.length + 1
 
@@ -23,8 +23,8 @@ class validaCpf{
     }
     geraNovoCpf(){
         const cpfSemDigitos = this.cpfLimpo.slice(0,-2)
-        const digito1 = this.geraDigito(cpfSemDigitos)
-        const digito2 = this.geraDigito(cpfSemDigitos + digito1)
+        const digito1 = validaCpf.geraDigito(cpfSemDigitos)
+        const digito2 = validaCpf.geraDigito(cpfSemDigitos + digito1)
         this.novoCPF = cpfSemDigitos + digito1 + digito2
     }
     valida(){
