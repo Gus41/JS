@@ -1,0 +1,5 @@
+class validaCpf{
+    constructor(cpf){
+        
+    }
+}
