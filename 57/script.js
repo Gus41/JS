@@ -19,11 +19,13 @@ class validaCpf{
             reverso--
         }
         const digito = 11 - (total%11)
+        return digito <=9? String(digito): "0"
     }
     geraNovoCpf(){
         const cpfSemDigitos = this.cpfLimpo.slice(0,-2)
         const digito1 = this.geraDigito(cpfSemDigitos)
         const digito2 = this.geraDigito(cpfSemDigitos + digito1)
+        this.novoCPF = cpfSemDigitos + digito1 + digito2
     }
     valida(){
         if(!this.cpfLimpo){
@@ -42,14 +44,18 @@ class validaCpf{
             console.log("valor invalido(sequencia)")
             return false
         }
-        if(!this.geraNovoCpf()){
-            console.log("Valor invalido")
-            return false
-        }
-        return "!"
+        this.geraNovoCpf()
+        console.log(this.novoCPF)
+
+
+        return this.novoCPF === this.cpfLimpo
     }
 
 }
 //070.987.720.03
-const cpfValido = new validaCpf("777.777.777.77")
-console.log(cpfValido.valida())
+const cpfValido = new validaCpf("070.987.720.03")
+if( cpfValido.valida() ){
+    console.log("CPF VALIDO")
+}else{
+    console.log("CPF INVALIDO")
+}
