@@ -13,7 +13,7 @@ h1{
     background-color: white;
     padding: 20px;
     margin: 20px auto;
-    width: 400px;
+    width: 25rem;
     border-radius: 10px;
     box-shadow: 2px 2px 3px black;
     display: flex;
@@ -22,7 +22,7 @@ h1{
     flex-direction: column;
 }
 .formulario{
-    width: max-content;
+    width: 250px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -56,15 +56,3 @@ button:hover{
     margin-left: 10px;
     font-size: medium;
 }
-@media screen and (max-width:600px) {
-
-    .container{
-        width: 325px;
-    }
-    li{
-        list-style: none;
-        border-bottom: 1px solid black;
-    }
-
-}
-
