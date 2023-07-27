@@ -22,7 +22,7 @@ h1{
     flex-direction: column;
 }
 .formulario{
-    width: 350px;
+    width: max-content;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -56,3 +56,15 @@ button:hover{
     margin-left: 10px;
     font-size: medium;
 }
+@media screen and (max-width:600px) {
+
+    .container{
+        width: 325px;
+    }
+    li{
+        list-style: none;
+        border-bottom: 1px solid black;
+    }
+
+}
+
