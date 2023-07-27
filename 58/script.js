@@ -78,7 +78,7 @@ class ValidaForm{
         const senhasV = this.senhasValidas()
 
         if( camposValidos && senhasV ){
-            alert("Formulario enviado,safada")
+            alert("Formulario enviado")
             //this.formulario.submit()
         }
     }
