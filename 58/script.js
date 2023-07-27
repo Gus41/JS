@@ -18,17 +18,16 @@ class ValidaForm{
         return true
     }
     validaUsuario(campo){
-        user = campo.value
+        const user = campo.value
         let valid = true
-
         if( user.length > 12 || user.length < 3 ){
             this.createError(campo,"Usuario precisa ter entre 3 e 12 caracteres")
             valid = false
-        }
-        if( !user.match(/^[a-zA-Z0-9]+$/g) ){
+        }else if( !user.match(/^[a-zA-Z0-9]+$/g) ){
+            valid = false
             this.createError(campo,"Usuario precisa conter apenas letras e ou numeros")
         }
-        return true
+        return valid
     }
     checkFields(){
         let valid = true
@@ -36,7 +35,6 @@ class ValidaForm{
             errortext.remove()
         }
         for(let field of this.formulario.querySelectorAll(".validar")){
-            alert(field.name)
             if(!field.value){ // campo vazio
                 this.createError(field,"Campo "+ field.name + " nao pode ficar em branco")
                 valid = false
@@ -47,18 +45,42 @@ class ValidaForm{
                     valid = false
                 }
             }
+
             if ( field.name === "Usuario" ){
-                alert("Ususario")
                 if(!this.validaUsuario(field)){
                     valid = false
                 }
-            }   
-
+            }         
         }
+        return valid
+    }
+    senhasValidas(){
+        let valid = true
+
+        const senha = this.formulario.querySelector("#Senha")
+        const repSenha = this.formulario.querySelector("#RepetirSenha")
+
+        if(senha.value.length < 6 || senha.value.length > 12){
+            valid = false
+            this.createError(senha,"Senha precisa ter entre 6 e 12 caracteres")
+        }
+
+        if(senha.value !== repSenha.value){
+            valid = false
+            this.createError(repSenha,"Senhas nao coincidem")
+        }
+
+        return valid
     }
     handleSubmit(event){
         event.preventDefault()
         const camposValidos = this.checkFields()
+        const senhasV = this.senhasValidas()
+
+        if( camposValidos && senhasV ){
+            alert("Formulario enviado")
+            //this.formulario.submit()
+        }
     }
     eventos(){
         this.formulario.addEventListener("submit",e=>{
