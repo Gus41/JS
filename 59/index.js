@@ -6,11 +6,24 @@ function NumeroAleatorio(min,max){
 
 
 function conectar(msg,tempo){
-    setTimeout(() => {
-        console.log(msg)
-    }, tempo);
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(msg)
+        }, tempo);
+
+    })
 }
 
-conectar("base1",NumeroAleatorio(1,10))
-conectar("base2",NumeroAleatorio(1,10))
-conectar("base3",NumeroAleatorio(1,10))
+conectar("base1",NumeroAleatorio(3,9)).then( e =>{
+    console.log(e)
+    return conectar("base2",3,5).then( e =>{
+        return e + "2"
+    }).then(resposta => {
+        console.log(resposta)
+        return conectar("bas3",NumeroAleatorio(2,7)).then(e=>{
+            console.log(e)
+        }).then( ()=>{
+            console.log("Ultimo a ser exibido")
+        })
+    })
+})
