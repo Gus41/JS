@@ -47,4 +47,4 @@ async function execute(){
     }
     
 }
-execute(0)
+execute()
