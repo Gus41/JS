@@ -3,20 +3,21 @@ function loadResult(response){
     const saida = document.getElementById("res")
     saida.innerHTML = response
 }
-function carregdaPagina(elemento){
-    const href = elemento.getAttribute("href")
-   
-    fetch(href).then( res => {
-        if( res.status !== 200 ){
-            throw new Error("ERRO 404")
+async function carregdaPagina(elemento){
+
+    try{
+        const href = elemento.getAttribute("href")
+    
+        const response = await fetch(href)
+        if( response.status !== 200 ){
+            throw new Error("404")
         }
-        return res.text()
-    }).then(html => {
+        const html = await response.text()
         loadResult(html)
-    })
-    .catch(err=>{
-        alert(err)
-    })
+
+        }catch(e){
+            alert(e)
+    }
 }
 document.addEventListener("click",(e)=>{
     const el = e.target
