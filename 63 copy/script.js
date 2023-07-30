@@ -78,7 +78,6 @@ function pesquisa(){
     
     let nome = input.value
     nome = nome.replace(" ","")
-    alert(nome)
     console.log("Contador: " + contador)
     const elementos = document.querySelectorAll(".elemento")
     for( let i =  0 ; i < contador ; i ++){
@@ -92,6 +91,7 @@ function pesquisa(){
             }
             alert("Elemento grifado na tabela")
             elemento.classList.add("grif")
+            
             return
         }
     }
