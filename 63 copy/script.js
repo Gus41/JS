@@ -1,8 +1,31 @@
 const Div_tabela = document.getElementById("tabela")
 const table = document.createElement("table")
 function addTitleInTable(table){
-    const titulo = document.createElement("th")
+    let titulo = document.createElement("th")
+    titulo.innerHTML = "Nome"
+    let tr = document.createElement("tr")
+    tr.appendChild(titulo)
+    table.appendChild(tr)
 
+    titulo = document.createElement("th")
+    titulo.innerHTML = "Idade"
+    tr.appendChild(titulo)
+    table.appendChild(tr)
+
+    titulo = document.createElement("th")
+    titulo.innerHTML = "Email"
+    tr.appendChild(titulo)
+    table.appendChild(tr)
+
+    titulo = document.createElement("th")
+    titulo.innerHTML = "Sexo"
+    tr.appendChild(titulo)
+    table.appendChild(tr)
+
+    titulo = document.createElement("th")
+    titulo.innerHTML = "Empresa"
+    tr.appendChild(titulo)
+    table.appendChild(tr)
 
 }
 function addInTable(e){
@@ -29,6 +52,7 @@ function addInTable(e){
 }
 
 function loadElements(elementos){
+    addTitleInTable(table)
     for( elemento of elementos ){
         addInTable(elemento)
     }
