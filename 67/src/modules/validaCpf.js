@@ -1,4 +1,4 @@
-class validaCpf{
+export default class validaCpf{
     constructor(cpf){
         Object.defineProperty(this,"cpfLimpo",{
             value: cpf.replace(/\D+/g,""),
