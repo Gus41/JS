@@ -18,6 +18,9 @@ module.exports = { // tudo que tiver nesse obj sera exportado
                     presets: ["@babel/env"]
                 }
             }
+        }, {
+            test: /\.css/,
+            use : ["style-loader","css-loader"]
         }]
     },
     devtool: "source-map" //mapeamento de erro no arquivo original
