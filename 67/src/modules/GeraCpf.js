@@ -15,10 +15,10 @@ export default class GeraCpf{
         )
     }
     GeraNovoCpf(){
-        const cpfSemDigito = this.rand()
+        const cpfSemDoisDigitos = this.rand()
         const d1 = validaCpf.geraDigito(cpfSemDigito)
-        const d2 = validaCpf.geraDigito(cpfSemDigito + 1)
-        const novoCpf = cpfSemDigito + d1 + d2
+        const d2 = validaCpf.geraDigito(cpfSemDigito + d1)
+        const novoCpf = cpfSemDoisDigitos + d1 + d2
         return this.formatado(novoCpf)
     }
 }
