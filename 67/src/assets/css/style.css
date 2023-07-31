@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(57, 16, 96);
+}
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
