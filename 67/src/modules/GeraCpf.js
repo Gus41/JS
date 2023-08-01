@@ -16,8 +16,8 @@ export default class GeraCpf{
     }
     GeraNovoCpf(){
         const cpfSemDoisDigitos = this.rand()
-        const d1 = validaCpf.geraDigito(cpfSemDigito)
-        const d2 = validaCpf.geraDigito(cpfSemDigito + d1)
+        const d1 = validaCpf.geraDigito(cpfSemDoisDigitos)
+        const d2 = validaCpf.geraDigito(cpfSemDoisDigitos + d1)
         const novoCpf = cpfSemDoisDigitos + d1 + d2
         return this.formatado(novoCpf)
     }
