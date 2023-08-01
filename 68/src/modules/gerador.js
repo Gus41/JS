@@ -17,15 +17,16 @@ const GeraSimbolo = ()=>{
 export default function GeraSenha(qntd,maiusculas,minusculas,numeros,simbolos){
     const SenhaArr = []
     qntd = Number(qntd)
-    for ( i = 0 ; i < qntd ; i ++ ){
+    for ( let i = 0 ; i < qntd ; i ++ ){
+        console.log("Dentro do for")
         maiusculas && SenhaArr.push(GeraMaiuscula())
-        minusculas && SenhaArr.push(GeraMinuscula)
-        numeros && SenhaArr.push(GeraNumero)
-        simbolos && SenhaArr.push(GeraSimbolo)
+        minusculas && SenhaArr.push(GeraMinuscula())
+        numeros && SenhaArr.push(GeraNumero())
+        simbolos && SenhaArr.push(GeraSimbolo())
     
     }
-    const SenhaString = SenhaArr.join("").slice(0,qntd)
-    return SenhaString
+    const SenhaString = SenhaArr.join("")
+    return SenhaString.slice(0,qntd)
 
 
 

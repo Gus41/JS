@@ -49,3 +49,7 @@ button:hover{
 #quantidade{
     width: 50px;
 }
+#res{
+    color: blueviolet;
+    font-weight: bold;
+}
