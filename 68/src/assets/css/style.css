@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(57, 16, 96);
+}
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
+#operacoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+}
+button{
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid blueviolet;
+    background-color: rgba(137, 43, 226, 0.337);
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    transition: .2s;
+}
+#quantidade{
+    width: 50px;
+}
