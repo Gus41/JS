@@ -8,6 +8,9 @@ const rotas = require("./routes")
 
 //pegando o que será postado e colocando no req.body
 app.use(express.urlencoded({extended:true}))
+const path = require("path")
+app.set("views",path.resolve(__dirname,"src","views"))
+app.set("view engine","ejs")
 
 app.use(rotas)
 
