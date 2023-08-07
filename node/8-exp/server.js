@@ -5,6 +5,8 @@ const app = express();
 // CREATE READ UPDATE DELETE
 // POST   GET   PUT   DELETE
 
+app.use(express.urlencoded({extended:true}))
+
 app.get("/",(req,res)=>{ // primeiro parametro é a rota
     //requisição e resposta
     res.send(`
@@ -15,14 +17,16 @@ app.get("/",(req,res)=>{ // primeiro parametro é a rota
     `)
 })
 app.post("/",(req,res)=>{
-
+    console.log(req.body)
     res.send(`
         Formulário recebido
     `)
 
 })
-app.get("/contato",(req,res)=>{
-    res.send("Obrigado por entrar em contato")
+app.get("/testes/:idUser?",(req,res)=>{
+    console.log(req.params)
+    console.log(req.query)
+    res.send(req.params.idUser)
 })
 //hospedando na porta 3000
 app.listen(3000, ()=>{
