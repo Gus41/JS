@@ -2,6 +2,8 @@ const express = require("express")
 const app = express();
 const rotas = require("./routes")
 const path = require("path")
+const Mid = require("./src/middlewares/mid")
+
 // http://meusite.com/ <- GET
 
 // CREATE READ UPDATE DELETE
@@ -12,8 +14,8 @@ app.use(express.urlencoded({extended:true}))
 
 //utilizando arquivos extaticos
 app.use(express.static(path.resolve(__dirname,"public")))
-
-
+// middwalre global
+app.use(Mid)
 
 app.set("views",path.resolve(__dirname,"src","views"))
 app.set("view engine","ejs")
