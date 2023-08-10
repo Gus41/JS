@@ -1,5 +1,18 @@
+require("dotenv").config()
+
+
 const express = require("express")
 const app = express();
+const mongo = require("mongoose")
+
+
+mongo.connect(process.env.STRINGDECONEXAO).then( ()=>{
+    console.log("Conexão efetuada")
+    app.emit("conectado")
+}).catch((e)=>{
+    console.log("Erro de conexão")
+})
+
 const rotas = require("./routes")
 const path = require("path")
 const Mid = require("./src/middlewares/mid")
@@ -23,10 +36,13 @@ app.set("view engine","ejs")
 app.use(rotas)
 
 //hospedando na porta 3000
-app.listen(3000, ()=>{
-    console.log("Acessar: http://localhost:3000")
-    console.log("Servidor executando na porta 3000...")
-}) //passando a porta
+app.on("conectado",()=>{
+    app.listen(3000, ()=>{
+        console.log("Acessar: http://localhost:3000")
+        console.log("Servidor executando na porta 3000...")
+    }) //passando a porta
+    
+})
 
 
 

@@ -1,7 +1,7 @@
 const express = require("express")
 const route = express.Router()
-const HomeController = require("./src/controullers/homeControuller")
-const ContatoControler = require("./src/controullers/ContatoController")
+const HomeController = require("./src/controllers/homeControuller")
+const ContatoControler = require("./src/controllers/ContatoController")
 
 
 //rotas da home
