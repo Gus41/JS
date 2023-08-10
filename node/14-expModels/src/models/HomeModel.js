@@ -5,8 +5,4 @@ const HomeSchema = new mong.Schema({
 })
 
 const HomeModel = mong.model("home",HomeSchema)
-class Home{
-    
-}
-
-module.exports = Home
+module.exports = HomeModel

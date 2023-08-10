@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(57, 16, 96);
+}
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    padding: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.47);
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
