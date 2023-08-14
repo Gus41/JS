@@ -36,10 +36,12 @@ const rotas = require("./routes")
 const path = require("path")
 
 const helmet = require("helmet")
-app.use(helmet)
+app.use(helmet())
+const csurf = require("csurf")
+
 
 const Mid = require("./src/middlewares/mid")
-
+const csurfErr = require ("./src/middlewares/Csurerr")
 // http://meusite.com/ <- GET
 
 // CREATE READ UPDATE DELETE
@@ -50,8 +52,12 @@ app.use(express.urlencoded({extended:true}))
 
 //utilizando arquivos extaticos
 app.use(express.static(path.resolve(__dirname,"public")))
+
+app.use(csurf()) // segurança
 // middwalre global
 app.use(Mid)
+app.use(csurfErr.CheckCsurfError)
+
 
 app.set("views",path.resolve(__dirname,"src","views"))
 app.set("view engine","ejs")
