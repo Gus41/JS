@@ -40,8 +40,7 @@ app.use(helmet())
 const csurf = require("csurf")
 
 
-const Mid = require("./src/middlewares/mid")
-const csurfErr = require ("./src/middlewares/Csurerr")
+const {Mid, csurfErr} = require("./src/middlewares/mid")
 // http://meusite.com/ <- GET
 
 // CREATE READ UPDATE DELETE
@@ -54,9 +53,12 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.resolve(__dirname,"public")))
 
 app.use(csurf()) // segurança
-// middwalre global
+
+
+// middlwares 
+
 app.use(Mid)
-app.use(csurfErr.CheckCsurfError)
+app.use(csurfErr)
 
 
 app.set("views",path.resolve(__dirname,"src","views"))
@@ -72,6 +74,7 @@ app.on("conectado",()=>{
     }) //passando a porta
     
 })
+
 
 
 
