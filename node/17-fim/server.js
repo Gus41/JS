@@ -12,14 +12,14 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const routes = require('./routes');
 const path = require('path');
-const helmet = require('helmet');
+//const helmet = require('helmet'); ( ATIVAR QUANDO UTILIZAR HTTPS NO SERVIDOR )
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-app.use(helmet());
+//app.use(helmet());
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.urlencoded({ extended: true })); //  "Autoriza" a postagem para dentro das aplicações
+app.use(express.json()); // Parse de json para dentro da aplicação
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
