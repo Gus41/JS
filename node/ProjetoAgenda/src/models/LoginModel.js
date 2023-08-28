@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 // instalamos o pacote validator ( npm i validator )
 // para validar nosso formulario
 const validator = require("validator")
+// pacote bcryptjs
+const bcript = require("bcryptjs")
+
 
 const LoginSchema = new mongoose.Schema({
   email: { type: String, required: true },
@@ -19,12 +22,26 @@ class Login {
     this.erros =[]
     this.user = null
   }
+  async userExists(){
+    const user = await LoginModel.findOne({email:this.body.email})
+
+    if( user ){
+      this.erros.push("Email já cadastrado")
+    }
+  }
   async register(){
     this.valida()
     if(this.erros.length > 0){
       return
     }
+    await this.userExists();
+    if(this.erros.length > 0){
+      return
+    }
+    const salt = bcript.genSaltSync();
+    this.body.password = bcript.hashSync(this.body.password, salt)
     try{
+      // gerando um salt e fazendo um hash da senha com o mesmo salt  
       this.user = await LoginModel.create(this.body)
     }catch(e){
       console.log(e)
