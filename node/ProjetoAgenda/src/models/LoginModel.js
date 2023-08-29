@@ -23,9 +23,9 @@ class Login {
     this.user = null
   }
   async userExists(){
-    const user = await LoginModel.findOne({email:this.body.email})
+    this.user = await LoginModel.findOne({email:this.body.email})
 
-    if( user ){
+    if( this.user ){
       this.erros.push("Email já cadastrado")
     }
   }
@@ -40,12 +40,10 @@ class Login {
     }
     const salt = bcript.genSaltSync();
     this.body.password = bcript.hashSync(this.body.password, salt)
-    try{
+   
       // gerando um salt e fazendo um hash da senha com o mesmo salt  
-      this.user = await LoginModel.create(this.body)
-    }catch(e){
-      console.log(e)
-    }
+    this.user = await LoginModel.create(this.body)
+    
   } 
   // verificando o body ( Verificando se todos são strings )
   cleanUp(){
@@ -75,9 +73,29 @@ class Login {
     if( this.body.password.length < 3 ||  this.body.password.length >= 18 ){
       this.erros.push("Tamanho da senha invalido")
     }
+  }
+  //---------------- func login
+  async login(){
+    this.valida()
+    if(this.erros.length > 0){
+      return
+    }
 
+    this.user = await LoginModel.findOne({email:this.body.email})
+    if( !this.user ){
+      this.erros.push("Usuario não existe")
+      return;
+    }else if(!bcript.compareSync(this.body.password, this.user.password)){
+      //comparando a senha que foi mandado pelo usuario com a senha pega da base de dados
+      // verificando se a senha é invalida no caso
+      this.erros.push("Senha invalida")
+      return
+    }
 
   }
+
+
+
 }
 // selecionar palavra e apertar control + d ++++ para selecionar todas no documento
 module.exports = Login;
