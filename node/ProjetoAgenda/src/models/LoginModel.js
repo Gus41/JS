@@ -80,7 +80,6 @@ class Login {
     if(this.erros.length > 0){
       return
     }
-
     this.user = await LoginModel.findOne({email:this.body.email})
     if( !this.user ){
       this.erros.push("Usuario não existe")
