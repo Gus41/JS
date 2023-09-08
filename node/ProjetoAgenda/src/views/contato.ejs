@@ -14,7 +14,15 @@
       <div class="shadow rounded px-3 py-3 my-2 mx-2 bg-dark text-light col-lg">
         <h4>Contato</h4>
         <p>Preencha corretamente os campos abaico</p>
-        <form action="/contato/register" method="POST" >
+        
+        <%      if(contato._id){      %>
+
+        <form action="/contato/edit/<%= contato._id %>" method="POST" >
+
+        <% }else{              %>
+          <form action="/contato/register" method="POST" >
+
+        <%       }          %>
           <input type="hidden" name="_csrf" value=<%= csrfToken %>>
           <div class="form-group">
             <label for="exampleInputEmail1">Nome</label>
