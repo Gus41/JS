@@ -79,3 +79,19 @@ exports.edit = async function(req,res){
     }
     
 }
+exports.delete = async (req,res)=>{
+    if(!req.params.id){
+        console.log("Sem id")
+        return res.render("404")
+    }
+    const contato = Contato.delete(req.params.id)
+    if(!contato){
+        console.log("Contato não encontrado")
+        return res.render("404")
+    }
+    
+    req.flash("succes","Contato apagado com sucesso")
+    req.session.save(()=>{
+        res.redirect("back")
+    })
+}

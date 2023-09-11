@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const { async } = require('regenerator-runtime');
 const validator = require("validator")
 
 
 
-const HomeSchema = new mongoose.Schema({
+const ContatoSchema = new mongoose.Schema({
   nome: { type: String, required: true },
   sobrenome: { type: String, required: false },
   email: { type: String, required: false },
@@ -12,7 +11,7 @@ const HomeSchema = new mongoose.Schema({
   criadoEm: {type: Date , default: Date.now}
 });
 
-const ContatoModel = mongoose.model('Home', HomeSchema);
+const ContatoModel = mongoose.model('Contatos', ContatoSchema);
 
 
 
@@ -97,7 +96,22 @@ class Contato{
     // new: true serve para retornar o contato com os dados atualizados
     this.contato =await ContatoModel.findByIdAndUpdate(id,this.body,{new : true})
   } 
+  //
+  static async GetContactcs(){
 
+    const contacts = await ContatoModel.find().sort({criadoEm: 1})
+    // retorna os ordenados de acordo com a criação dos mesmos ( 1 Para crescente e -1 para decresecente )
+    console.log(contacts)
+    return contacts
+
+  }
+  static async delete(id){
+    if(typeof id != "string"){
+      return
+    }
+    const contato = await ContatoModel.findByIdAndDelete(id)
+    return contato
+  }
 }
 
 
