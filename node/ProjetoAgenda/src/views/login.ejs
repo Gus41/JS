@@ -16,7 +16,7 @@
         <div class="shadow rounded px-3 py-3 my-2 mx-2 bg-dark text-light col-lg">
           <h4>Faça seu cadastro</h4>
           <p>Se você ainda não tem conta, preencha o formulario abaixo</p>
-          <form action="/login/register" method="POST"  >
+          <form class="form-register" action="/login/register" method="POST"  >
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label for="exampleInputEmail1">Endereço de Email</label>
@@ -33,7 +33,7 @@
         <div class="shadow rounded px-3 py-3 my-2 mx-2 bg-dark text-light col-lg">
           <h4>Faça login</h4>
           <p>Se você já tem uma conta, insira seus dados nos campos abaixo</p>
-          <form action="/login/logar" method="POST" >
+          <form class="form-login" action="/login/logar" method="POST" >
             <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label for="exampleInputEmail1">Endereço de Email</label>
