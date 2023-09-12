@@ -35,7 +35,6 @@ class Contato{
 
   cleanUp = ()=>{
 
-    console.log(this.body)
     for(const key in this.body){
         if( typeof this.body[key] !== "string" || !this.body[key]){
           this.body[key] = "";
@@ -101,7 +100,6 @@ class Contato{
 
     const contacts = await ContatoModel.find().sort({criadoEm: 1})
     // retorna os ordenados de acordo com a criação dos mesmos ( 1 Para crescente e -1 para decresecente )
-    console.log(contacts)
     return contacts
 
   }
